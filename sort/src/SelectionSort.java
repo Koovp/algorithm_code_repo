@@ -7,7 +7,7 @@
  */
 public class SelectionSort {
 
-    public static void sort(Integer[] nums) {
+    public static void sort(int[] nums) {
 
         int min;
 
@@ -29,7 +29,7 @@ public class SelectionSort {
 
     public static void main(String[] args) {
         int n = 20;
-        Integer[] arr = SortTestHelper.generateRandomArray(n, 0, 100000);
+        int[] arr = SortTestHelper.generateRandomArray(n, 0, 100000);
         SelectionSort.sort(arr);
         for (Integer integer : arr) {
             System.out.print(integer);
@@ -37,7 +37,7 @@ public class SelectionSort {
         }
     }
 
-    public static void swap(Integer[] nums, int i, int j) {
+    public static void swap(int[] nums, int i, int j) {
         nums[i] = nums[i] ^ nums[j];
         nums[j] = nums[i] ^ nums[j];
         nums[i] = nums[i] ^ nums[j];

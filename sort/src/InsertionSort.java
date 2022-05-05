@@ -6,9 +6,7 @@
  */
 public class InsertionSort {
 
-    public static int[] nums = {9,6,4,5,8,7,2,3,1,0};
-
-    public static void sort(Integer[] nums){
+    public static void sort(int[] nums){
         for (int i = 1; i < nums.length; i++) {
             for (int j = 0 ; j < i; j++) {
                 if (nums[i] < nums[j]) {
@@ -20,7 +18,7 @@ public class InsertionSort {
 
     public static void main(String[] args) {
         int n = 20;
-        Integer[] arr = SortTestHelper.generateRandomArray(n, 0, 100000);
+        int[] arr = SortTestHelper.generateRandomArray(n, 0, 100000);
         InsertionSort.sort(arr);
         for (Integer integer : arr) {
             System.out.print(integer);
@@ -28,7 +26,7 @@ public class InsertionSort {
         }
     }
 
-    public static void swap(Integer[] nums, int i, int j) {
+    public static void swap(int[] nums, int i, int j) {
         nums[i] = nums[i] ^ nums[j];
         nums[j] = nums[i] ^ nums[j];
         nums[i] = nums[i] ^ nums[j];
