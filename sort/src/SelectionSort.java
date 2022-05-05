@@ -28,9 +28,8 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-
-        int N = 20;
-        Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 100000);
+        int n = 20;
+        Integer[] arr = SortTestHelper.generateRandomArray(n, 0, 100000);
         SelectionSort.sort(arr);
         for (Integer integer : arr) {
             System.out.print(integer);
