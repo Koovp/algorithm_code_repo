@@ -7,18 +7,37 @@
 public class InsertionSort {
 
     public static void sort(int[] nums){
+
+        int temp;
+
         for (int i = 1; i < nums.length; i++) {
-            for (int j = 0 ; j < i; j++) {
-                if (nums[i] < nums[j]) {
-                    swap(nums, i, j);
+            if(nums[i]<nums[i-1]){
+                temp = nums[i];
+                for (int j = i ; j >=0 ; j--) {
+                    if (j > 0 && temp < nums[j-1]) {
+                        nums[j] = nums[j-1];
+                    } else {
+                        nums[j] = temp;
+                        break;
+                    }
                 }
             }
+            for (Integer integer : nums) {
+                System.out.print(integer);
+                System.out.print(' ');
+            }
+            System.out.println();
         }
     }
 
     public static void main(String[] args) {
         int n = 20;
         int[] arr = SortTestHelper.generateRandomArray(n, 0, 100000);
+        for (Integer integer : arr) {
+            System.out.print(integer);
+            System.out.print(' ');
+        }
+        System.out.println();
         InsertionSort.sort(arr);
         for (Integer integer : arr) {
             System.out.print(integer);
