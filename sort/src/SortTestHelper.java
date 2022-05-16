@@ -26,9 +26,9 @@ public class SortTestHelper {
     /**
      * 打印arr数组的所有内容
      */
-    public static void printArray(Object[] arr) {
+    public static void printArray(int[] arr) {
 
-        for (Object o : arr) {
+        for (int o : arr) {
             System.out.print(o);
             System.out.print(' ');
         }
