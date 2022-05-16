@@ -22,27 +22,16 @@ public class InsertionSort {
                     }
                 }
             }
-            for (Integer integer : nums) {
-                System.out.print(integer);
-                System.out.print(' ');
-            }
-            System.out.println();
+            SortTestHelper.printArray(nums);
         }
     }
 
     public static void main(String[] args) {
         int n = 20;
         int[] arr = SortTestHelper.generateRandomArray(n, 0, 100000);
-        for (Integer integer : arr) {
-            System.out.print(integer);
-            System.out.print(' ');
-        }
-        System.out.println();
+        SortTestHelper.printArray(arr);
         InsertionSort.sort(arr);
-        for (Integer integer : arr) {
-            System.out.print(integer);
-            System.out.print(' ');
-        }
+        SortTestHelper.printArray(arr);
     }
 
     public static void swap(int[] nums, int i, int j) {

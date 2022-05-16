@@ -30,11 +30,9 @@ public class SelectionSort {
     public static void main(String[] args) {
         int n = 20;
         int[] arr = SortTestHelper.generateRandomArray(n, 0, 100000);
+        SortTestHelper.printArray(arr);
         SelectionSort.sort(arr);
-        for (Integer integer : arr) {
-            System.out.print(integer);
-            System.out.print(' ');
-        }
+        SortTestHelper.printArray(arr);
     }
 
     public static void swap(int[] nums, int i, int j) {

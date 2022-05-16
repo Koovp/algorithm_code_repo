@@ -15,11 +15,7 @@ public class BubbleSort {
                     swap(nums, j, j + 1);
                 }
             }
-            for (Integer integer : nums) {
-                System.out.print(integer);
-                System.out.print(' ');
-            }
-            System.out.println();
+            SortTestHelper.printArray(nums);
         }
     }
 
@@ -27,16 +23,9 @@ public class BubbleSort {
 
         int n = 20;
         int[] arr = SortTestHelper.generateRandomArray(n, 0, 100000);
-        for (Integer integer : arr) {
-            System.out.print(integer);
-            System.out.print(' ');
-        }
-        System.out.println();
+        SortTestHelper.printArray(arr);
         BubbleSort.sort(arr);
-        for (Integer integer : arr) {
-            System.out.print(integer);
-            System.out.print(' ');
-        }
+        SortTestHelper.printArray(arr);
 
     }
 
